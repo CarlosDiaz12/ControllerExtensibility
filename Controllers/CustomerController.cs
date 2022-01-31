@@ -18,6 +18,8 @@ namespace ControllerExtensibility.Controllers
                 ActionName = "Index"
             });
         }
+        [HttpGet]
+        [ActionName("Enumerate")]
         public ViewResult List()
         {
             return View("Result", new Result
@@ -25,6 +27,12 @@ namespace ControllerExtensibility.Controllers
                 ControllerName = "Customer",
                 ActionName = "List"
             });
+        }
+
+        [NonAction]
+        public ActionResult MyAction()
+        {
+            return View();
         }
     }
 }
