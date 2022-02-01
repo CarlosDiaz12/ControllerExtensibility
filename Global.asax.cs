@@ -15,7 +15,7 @@ namespace ControllerExtensibility
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             // Registering a Custom Controller Factory
-            ControllerBuilder.Current.SetControllerFactory(new CustomControllerFactory());
+            // ControllerBuilder.Current.SetControllerFactory(new CustomControllerFactory());
 
             // Global Namespace Prioritization
             ControllerBuilder.Current.DefaultNamespaces.Add("MyControllerNamespace");
